@@ -23,7 +23,11 @@ class Mps < Formula
 
   test do
     (testpath/"test.c").write <<~EOS
-      #include <mps.h>
+      #include "mps.h"
+      #include "mpscawl.h"
+      #include "mpscamc.h"
+      #include "mpsavm.h"
+
       int main() {
         mps_arena_t arena;
         mps_res_t res = mps_arena_create(&arena, mps_arena_class_vm(), 1024*1024);
