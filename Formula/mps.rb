@@ -5,7 +5,7 @@ class Mps < Formula
   homepage "https://www.ravenbrook.com/project/mps/"
   url "https://github.com/Ravenbrook/mps/archive/refs/tags/release-1.118.0.tar.gz"
   sha256 "58c1c8cd82ff8cd77cc7bee612b94cf60cf6a6edd8bd52121910b1a23344e9a9"
-  license "Copyright © 2001–2020 Ravenbrook Limited."
+  license "BSD-2-Clause"
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
