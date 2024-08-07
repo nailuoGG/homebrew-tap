@@ -1,23 +1,52 @@
-#+title: Homebrew Formulae and Casks
+#+title: Homebrew Formula and Casks
 
 
-Install HomeBrew
+** Install  [[https://brew.sh/][HomeBrew]]
+
 
 #+begin_src shell
 # For general users
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# For users in Mainland China
-## Option 1
-/bin/bash -c "$(curl -fsSL https://mirror.ghproxy.com/raw.githubusercontent.com/lzwme/homebrew-cn/HEAD/install.sh)"
-## Option 2
-/bin/bash -c "$(curl -fsSL https://gitee.com/ineo6/homebrew-install/raw/master/install.sh)"
 #+end_src
 
+
+For users in Mainland China
+
+#+begin_src shell
+# ~/.zshenv
+export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
+export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
+#+end_src
+
+
+#+begin_src shell
+/bin/bash -c "$(curl -fsSL https://mirrors.ustc.edu.cn/misc/brew-install.sh)"
+#+end_src
+
+
+** Usage
 
 #+begin_src shell
 brew tap nailuoGG/tap
 
 brew install <formula>
 brew install --cask <cask>
+#+end_src
+
+
+** Formula List
+
+*** ~Mps~
+
+Usage: work with emacsc  [[https://github.com/emacs-mirror/emacs/tree/scratch/igc][scratch/cgi]]  feature branch
+
+Source: [[https://github.com/Ravenbrook/mps][Ravenbrook/mps: The Memory Pool System]]
+
+Install Mps:
+
+#+begin_src shell
+brew install nailuogg/tap/mps
 #+end_src
